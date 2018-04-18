@@ -13,13 +13,21 @@ app.get('/new', (request, response) => {
   response.sendFile('new.html', {root:'./public'});
 })
 app.post('/articles', bodyParser, function(request, response) {
+});
+
   response.status(201).json(request.body);
   console.log(request.body);
+  console.log('response', response.body);
+
   response.send('Record posted to server!!');
   // REVIEW: This route will receive a new article from the form page, new.html, and log that form data to the console. We will wire this up soon to actually write a record to our persistence layer!
   
 
 })
+
+
+});
+
 
 app.use((request, response) => {
   response.status(404).send('Sorry, that route does not exist.');

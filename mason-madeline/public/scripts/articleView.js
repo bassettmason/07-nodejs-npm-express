@@ -129,11 +129,11 @@ articleView.submit = event => {
   // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
   // This function is defined in article.js. It is called bellow. It is triggered by posts.
   article.insertRecord();
-}
+};
 
 articleView.initIndexPage = () => {
   Article.all.forEach(article =>{
-    $('#articles').append(article.toHtml())
+    $('#articles').append(article.toHtml());
   });
 
   articleView.populateFilters();

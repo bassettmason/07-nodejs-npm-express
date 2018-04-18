@@ -50,7 +50,7 @@ Article.prototype.insertRecord = function(callback) {
       console.log(data);
 
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // the purpose is to invoke the call back if there is a callback passed in. Yes. Because the callback that calls it is a submit event.
       if (callback) callback();
     })
 };

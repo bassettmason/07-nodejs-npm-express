@@ -88,7 +88,7 @@ articleView.initNewArticlePage = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// this is called aboveon change of the form input.
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -113,7 +113,8 @@ articleView.create = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// This is only called when the event triggers it which is the submit.
+
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -126,7 +127,7 @@ articleView.submit = event => {
   });
 
   // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // This function is defined in article.js. It is called bellow. It is triggered by posts.
   article.insertRecord();
 }
 
